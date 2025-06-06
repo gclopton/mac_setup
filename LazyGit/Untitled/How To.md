@@ -90,7 +90,7 @@
 
 ---
 
-#### Troubleshooting tips
+# Troubleshooting tips
 
 - If `ssh -T git@github.com` does **not** greet you, your key is missing from GitHub or the remote URL is using HTTPS.
     
@@ -104,3 +104,50 @@
     
 
 With these steps you can recreate the entire setup from scratch any time, entirely in full sentences—and that should keep it stuck in long-term memory. Cool beans!
+
+## Unstage and Remove a File from the Commit
+
+```bash
+# step back one commit but keep all changes in the working tree
+git reset --soft HEAD~1
+
+# stop tracking the credentials file
+git rm --cached .obsidian/plugins/smart-connections/data.json
+
+```
+
+
+
+**Add the path to `.gitignore`** so it never gets committed again
+
+
+
+```bash
+echo ".obsidian/plugins/smart-connections/data.json" >> .gitignore
+git add .gitignore
+```
+
+
+Amend the existing commit:
+
+```bash
+git commit --amend --no-edit
+```
+
+
+
+Check whether remote is configured:
+
+```bash
+git remote -v
+```
+
+
+
+Push and set the upstream:
+
+```bash
+git push --force --set-upstream origin master
+```
+
+
