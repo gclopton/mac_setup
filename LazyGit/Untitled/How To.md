@@ -209,3 +209,101 @@ Refresh the GitHub page and the updated commit will be there.
 > _(Stage → Commit → Push)_
 
 That’s all you need for every future change. Cool beans! 🎉
+
+
+
+# Delete a Vault
+
+
+```bash
+sudo rm -rf vasp
+```
+
+QAZPLM135pc!
+QAZPLM135pc!
+
+
+# Switching to Remote SSH Before Pushing
+
+What you’re seeing is a classic HTTPS vs SSH (and maybe “wrong-URL”) mix-up:
+
+```
+remote: Repository not found.
+fatal: Authentication failed for 'https://github.com/gclopton/vasp.git/'
+```
+
+**What it means**
+
+1. Your `origin` remote is set to **HTTPS**, so Git prompts for _username / password_.  
+    _GitHub stopped accepting account passwords in 2021, so a Personal Access Token (PAT) is now required._
+    
+2. GitHub then answers **“Repository not found”**, which usually indicates
+    
+    - the repo was deleted or never created under that URL, **or**
+        
+    - you’re authenticating anonymously (which is what happens when you hit ⏎ at the prompt).
+        
+
+---
+
+## Fix in two minutes
+
+### 1 Double-check the repo actually exists
+
+Open `https://github.com/gclopton/vasp` in your browser.
+
+- **404 page** → create the repo (same name, empty) and you’re good to push.
+    
+- **Repo exists** → keep going to step 2.
+    
+
+### 2 Switch the remote to SSH so you never see the password prompt again
+
+```bash
+git remote set-url origin git@github.com:gclopton/vasp.git
+```
+
+_(In lazygit: focus the **Branches/Remotes** panel → highlight **origin** → press **e** → paste the SSH URL → Enter.)_
+
+SSH will use the key you already configured earlier (`ssh -T git@github.com` greeted you).
+
+### 3 Push and set the upstream (first time only)
+
+```bash
+git push -u origin master      # or main, whichever branch you’re on
+```
+
+_(In lazygit: highlight the branch → press **u** → type `origin master` → Enter → **P** to push.)_
+
+After this you can simply press **P** in lazygit (or run plain `git push`) and it will work without prompts.
+
+---
+
+## If you prefer to keep HTTPS
+
+1. **Create a PAT** (GitHub → Settings → Developer settings → Personal access tokens).
+    
+2. When Git asks for password, paste the PAT.  
+    _Username_ is still `gclopton`.
+    
+3. Optionally store it so you’re not prompted every time:
+    
+    ```bash
+    git config --global credential.helper store
+    ```
+    
+
+But using **SSH** is less hassle once the key is in place.
+
+---
+
+### Quick checklist for next time
+
+|What to verify|Command|Good output|
+|---|---|---|
+|Remote URL|`git remote -v`|`origin git@github.com:…`|
+|SSH works|`ssh -T git@github.com`|“Hi gclopton!”|
+|Upstream set|`git status`|“up to date with ‘origin/master’”|
+
+Once those three line up, the routine is back to ␣ → **c** → **P** every time. Cool beans! 🎉
+
