@@ -151,3 +151,61 @@ git push --force --set-upstream origin master
 ```
 
 
+
+# Committing and Pushing Edits
+
+
+Because your branch is already set to track **origin / master**, the workflow is now just a tidy three-step loop:
+
+---
+
+### 1 Stage the change
+
+_In the Files panel_ (blue highlight):
+
+- Move the cursor onto `How To.md`.
+    
+- Press **Space**.  
+    _The file name turns green, showing it’s staged._
+    
+
+(If you ever want to stage everything at once, highlight “/” at the top of the tree and press **A**.)
+
+---
+
+### 2 Create a new commit
+
+_Still in the Files panel_:
+
+1. Press **`c`**.
+    
+2. Lazygit opens its mini-editor. Type a short message such as
+    
+    ```
+    docs: refine setup-how-to
+    ```
+    
+3. Press **Ctrl + s** (or just **Enter**) to save the message, then **Esc** to close the editor.  
+    _You’ll now see the new commit appear in the Commits panel._
+    
+
+---
+
+### 3 Push the commit
+
+_Any panel is fine_:
+
+- Press **`P`** (capital P).  
+    Because the upstream is already configured, lazygit immediately runs `git push` and you’ll see a green ✓ in the command log on success.
+    
+
+Refresh the GitHub page and the updated commit will be there.
+
+---
+
+#### Quick mnemonic
+
+> **␣ → c → P**  
+> _(Stage → Commit → Push)_
+
+That’s all you need for every future change. Cool beans! 🎉
