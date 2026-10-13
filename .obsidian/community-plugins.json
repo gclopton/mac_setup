@@ -1,5 +1,4 @@
 [
-  "highlightr-plugin",
   "callout-manager",
   "colorful-note-borders",
   "execute-code",
@@ -25,7 +24,6 @@
   "obsidian-style-settings",
   "chem",
   "copy-inline-code",
-  "cloze",
   "obsidian-wrap-with-shortcuts",
   "text-snippets-obsidian",
   "dbfolder",
@@ -47,6 +45,5 @@
   "math-studio",
   "ink-studio",
   "slide-studio",
-  "research-outline",
-  "research-colors"
+  "research-outline"
 ]
