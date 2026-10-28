@@ -1,0 +1,7 @@
+radius area volume
+This file is for practicing Neovim commands.
+Move between words and lines.
+Select a whole line.
+Delete a word, then undo.
+Delete a line, then undo.
+Save when you want to keep your changes.

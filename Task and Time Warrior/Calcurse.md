@@ -1,0 +1,8 @@
+
+Short answer: there’s no official, built-in Taskwarrior ↔︎ Calcurse integration, but they play very nicely together. Calcurse stores its data in plain text and exposes “hooks,” so most folks glue the two with a tiny script that exports selected Taskwarrior tasks into Calcurse’s `apts` (and/or `todo`) files and runs it via a Calcurse `pre-load` hook. The Calcurse manual documents those hooks, and there are public examples of people doing exactly this (for instance, generating Calcurse entries from Taskwarrior with a Python `tasklib` script and wiring it to `pre-load`). ([Calcurse](https://calcurse.org/files/calcurse.1.html?utm_source=chatgpt.com "CALCURSE(1)"), [Nfraprado](https://nfraprado.net/post/organization-beyond-taskwarrior.html "Organization beyond Taskwarrior - nfraprado"))
+
+If you prefer a server-style sync, you can use CalDAV as a bridge: Calcurse ships an (alpha) `calcurse-caldav` sync helper, and there’s a Radicale plugin that exposes Taskwarrior data over CalDAV. That path is more involved and fiddly, but it does exist. ([Calcurse](https://calcurse.org/files/calcurse-caldav.html?utm_source=chatgpt.com "calcurse-caldav"), [LWN.net](https://lwn.net/Articles/825837/?utm_source=chatgpt.com "Managing tasks with Org mode and iCalendar"))
+
+As a side note, if what you want is simply to _view_ both in one terminal UI without wiring them together, Calcure (another TUI) can import from both Calcurse and Taskwarrior. ([LinuxLinks](https://www.linuxlinks.com/calcure-modern-tui-calendar-task-manager/?utm_source=chatgpt.com "calcure - modern TUI calendar and task manager"))
+
+If you’d like, I can drop in a minimal exporter + Calcurse hook that puts `+cal` (or due/scheduled) Taskwarrior items onto your Calcurse calendar.

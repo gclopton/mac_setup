@@ -36,5 +36,7 @@
   "knowledge-library",
   "vault-manager-status",
   "callout-manager-managed",
-  "gc-explorer-indicators"
+  "gc-explorer-indicators",
+  "callout-outline",
+  "obsidian-go-to-line"
 ]
