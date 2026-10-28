@@ -37,5 +37,6 @@
   "vault-manager-status",
   "callout-manager-managed",
   "gc-explorer-indicators",
-  "callout-outline"
+  "callout-outline",
+  "obsidian-go-to-line"
 ]
