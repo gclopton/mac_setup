@@ -307,3 +307,58 @@ But using **SSH** is less hassle once the key is in place.
 
 Once those three line up, the routine is back to ␣ → **c** → **P** every time. Cool beans! 🎉
 
+
+# Scrubbing a Secret Key and Ammending a Root Commit
+
+
+**Remove the offending file from the index but keep it on disk**
+
+
+> [!Question]
+> You tried to make an initial commit to your git repository but you obtained an error: 
+
+```bash
+GH013: Repository rule violoations found for refs/head/master: Push cannot contain secrets
+
+OpenAI API Key commit: Locations
+- commit: 5be78a4d74a4056d5c2ed99caa7bb72b4dd4f8dd 
+- path: .obsidian/plugins/smart-connections/data.json:2
+```
+
+> [!Question] Cont.
+> GitHub has blocked the push. What steps do you need to take to remove or scrub the secret, and then recommit and push again?
+
+
+**1.) Unstage and remove the file from the commit.**
+
+```bash
+git rm --cached .obsidian/plugins/smart-connections/data.json
+```
+
+
+**Add the path to `.gitignore`** **so it never gets committed again**
+
+
+```bash
+echo ".obsidian/plugins/smart-connections/data.json" >> .gitignore
+git add .gitignore
+```
+
+
+**Amend the existing commit**
+
+```bash
+git commit --amend --no-edit
+```
+
+
+
+**Force-push (only required because we rewrote history)**
+Scenario: Your repo already knows about **`origin`**, it just hasn’t linked (`tracked`) the local **master** branch to that remote yet. Because you rewrote the root commit you also need a **force-push** (`--force` or `-f`).  Do the two things in one command:
+
+```bash
+git push --force --set-upstream origin master
+```
+
+
+

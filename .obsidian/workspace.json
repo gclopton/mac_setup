@@ -4,24 +4,82 @@
     "type": "split",
     "children": [
       {
-        "id": "15d2fe56e4cd089b",
+        "id": "1226884f0c40b1f5",
         "type": "tabs",
         "children": [
           {
-            "id": "9fd3514610c5cacd",
+            "id": "a7b78014d6677fcc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LazyGit/Untitled/How To.md",
+                "file": "Task and Time Warrior/Task Warrior TUI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "How To"
+              "title": "Task Warrior TUI"
+            }
+          },
+          {
+            "id": "67fa8e9a37e4282f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Task and Time Warrior/Task Warrior.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Task Warrior"
+            }
+          },
+          {
+            "id": "4cb34f0b295b7872",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NVIM/First keys - practice.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "First keys - practice"
+            }
+          },
+          {
+            "id": "18bd497280265994",
+            "type": "leaf",
+            "state": {
+              "type": "study-studio-home",
+              "state": {
+                "query": "",
+                "selected": "tools-neovim",
+                "page": "chapters",
+                "chapterId": ""
+              },
+              "icon": "house",
+              "title": "Study Home"
+            }
+          },
+          {
+            "id": "285e33677c971d50",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NVIM/First keys - practice.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "First keys - practice"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -41,7 +99,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -73,8 +133,19 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "df105e70f1ddbc05",
+            "type": "leaf",
+            "state": {
+              "type": "study-studio-home-sidebar",
+              "state": {},
+              "icon": "house",
+              "title": "Study library"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -142,33 +213,23 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LazyGit/Untitled.md",
+                "file": "Task and Time Warrior/Task Warrior.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
-            }
-          },
-          {
-            "id": "ced0943ec98cfe41",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "smart-connections",
-              "title": "Smart Connections Files"
+              "title": "Outline of Task Warrior"
             }
           },
           {
             "id": "103d88be2201af08",
             "type": "leaf",
             "state": {
-              "type": "quiet-outline",
+              "type": "research-outline",
               "state": {},
-              "icon": "lines-of-text",
-              "title": "Quiet Outline"
+              "icon": "lucide-ghost",
+              "title": "quiet-outline"
             }
           },
           {
@@ -180,57 +241,20 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
-          },
-          {
-            "id": "4cc2c99c18d7e62d",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
-            }
-          },
-          {
-            "id": "7a273627e994a854",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
-            }
-          },
-          {
-            "id": "e5ae2a435917f27c",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "smart-connections",
-              "title": "Smart Connections Files"
-            }
-          },
-          {
-            "id": "9d87c2a5f1231c9c",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "smart-connections",
-              "title": "Smart Connections Files"
-            }
           }
         ],
         "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 339.5,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "slide-studio:Slide Studio": false,
+      "study-studio:Study Studio: choose a question": false,
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -240,20 +264,43 @@
       "audio-recorder:Start/stop recording": false,
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
       "ketcher:Create new structure": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidian-advanced-slides:Show Slide Preview": false,
       "terminal:Open terminal": false,
       "cloze:Toggle all clozes": false,
       "dbfolder:Create a new database table": false,
       "modalforms:Edit forms": false,
-      "markdown-table-editor:Open Markdown Table Editor": false
+      "markdown-table-editor:Open Markdown Table Editor": false,
+      "callout-manager:Insert Callout": false
     }
   },
-  "active": "9fd3514610c5cacd",
+  "active": "285e33677c971d50",
   "lastOpenFiles": [
-    "LazyGit/Important Commands.md",
+    "NVIM/Chapter.md",
+    "NVIM/First keys - practice.md",
+    "NVIM/Plugins/LuaSnip/Installation.md",
+    "NVIM/File Navigation.md",
+    "NVIM/Plugins/LuaSnip/Snippets (LuaSnip).md",
+    "NVIM/Plugins/LuaSnip/Usage.md",
+    "NVIM/Plugins/LuaSnip",
+    "Task and Time Warrior/Task Warrior TUI.md",
+    "Task and Time Warrior/Task Warrior.md",
+    "Task and Time Warrior/Task Warrior Web UI.md",
+    "Task and Time Warrior/Calcurse.md",
+    "Task and Time Warrior/Time Warrior.md",
+    "Task and Time Warrior",
+    "Utilities/Nav/usage.md",
+    "NVIM/Plugins",
+    "Utilities/Nav/readme.md",
+    "Utilities/Nav/installation.md",
+    "Utilities/Nav",
+    "Utilities/transfer.md",
+    "LazyGit/Questions.md",
+    "NVIM",
     "LazyGit/Untitled/How To.md",
-    "Untitled",
+    "LazyGit/images",
+    "LazyGit/images/Screenshot 2025-06-06 at 4.18.42 PM.png",
+    "LazyGit/Important Commands.md",
+    "Utilities",
     "LazyGit/Untitled",
     "LazyGit"
   ]
