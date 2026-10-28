@@ -3,3 +3,38 @@
 
 # Ignore Smart Connections folder because embeddings file is large and updated frequently
 .smart-connections
+
+# Vault Sync: per-Mac settings, credentials and rebuildable caches
+.DS_Store
+.env
+.env.*
+passwords.psv
+.trash/
+.cache/
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+.venv-*/
+venv/
+venv-*/
+.enumlib-build/
+/.obsidian/workspace*.json
+/.obsidian/**/cache/
+/.obsidian/plugins/obsidian-local-rest-api/data.json
+/.obsidian/plugins/copilot/data.json
+/.obsidian/plugins/smart-connections/data.json
+/.obsidian/plugins/textgenerator/data.json
+/.obsidian/plugins/obsidian-git/data.json
+/.obsidian/plugins/terminal/data.json
+/.obsidian/plugins/obsidian-shellcommands/data.json
+/.obsidian/plugins/code-links/data.json
+/.obsidian/.DS_Store
+/.obsidian/plugins/code-links/data.json
+/.obsidian/plugins/knowledge-library/data.json
+/.obsidian/plugins/obsidian-local-rest-api/data.json
+/.obsidian/plugins/terminal/data.json
+/.obsidian/workspace.json
