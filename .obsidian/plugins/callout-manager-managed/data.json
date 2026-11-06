@@ -33,7 +33,12 @@
       "Output",
       "caption",
       "table",
-      "answer"
+      "answer",
+      "property",
+      "convention",
+      "rule",
+      "guideline",
+      "procedure"
     ],
     "settings": {
       "expansion": [
@@ -353,6 +358,46 @@
         {
           "changes": {
             "color": "65, 105, 225"
+          }
+        }
+      ],
+      "property": [
+        {
+          "changes": {
+            "color": "43, 230, 109",
+            "icon": "lucide-equal"
+          }
+        }
+      ],
+      "convention": [
+        {
+          "changes": {
+            "icon": "lucide-ruler",
+            "color": "137, 207, 240"
+          }
+        }
+      ],
+      "rule": [
+        {
+          "changes": {
+            "icon": "lucide-ruler",
+            "color": "137, 207, 240"
+          }
+        }
+      ],
+      "guideline": [
+        {
+          "changes": {
+            "icon": "lucide-list-ordered",
+            "color": "255, 153, 204"
+          }
+        }
+      ],
+      "procedure": [
+        {
+          "changes": {
+            "icon": "lucide-list-ordered",
+            "color": "255, 153, 204"
           }
         }
       ]
