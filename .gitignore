@@ -436,3 +436,10 @@ venv-*/
 /.obsidian/plugins/vault-manager-status/manifest.json
 /.obsidian/plugins/vault-manager-status/styles.css
 # End VaultSync vault-manager-status managed runtime
+
+# VaultSync colored-horizontal-rules managed runtime
+/.obsidian/plugins/colored-horizontal-rules/.runtime-release.json
+/.obsidian/plugins/colored-horizontal-rules/main.js
+/.obsidian/plugins/colored-horizontal-rules/manifest.json
+/.obsidian/plugins/colored-horizontal-rules/styles.css
+# End VaultSync colored-horizontal-rules managed runtime
